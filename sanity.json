@@ -8,6 +8,7 @@
     "dataset": "production"
   },
   "plugins": [
+    "@sanity/dashboard",
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
@@ -15,9 +16,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
@@ -25,9 +24,9 @@
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
     },
-    {
-      "implements": "part:@sanity/base/root",
-      "path": "plugins/sanity-plugin-tutorial/CustomDefaultLayout"
+    { 
+      "implements": "part:@sanity/dashboard/config", 
+      "path": "./src/dashboardConfig.js" 
     }
   ]
 }
