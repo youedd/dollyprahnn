@@ -1,6 +1,7 @@
 ---
 import client from "../../../graphql/client";
 import type { Creation } from "../../../graphql/generated/sdk";
+import { Image } from "@astrojs/image/components";
 
 export type Props = {
     creation: Creation;
@@ -32,4 +33,36 @@ const { creation } = Astro.props;
 
 <article>
     <h1>{creation?.slug?.current}</h1>
+    {
+        creation.images?.map((img) => {
+            if (!img) {
+                return null;
+            }
+
+            return (
+                <Image
+                    src={img.asset?.url}
+                    alt={img.asset?.altText ?? ""}
+                    width={300}
+                    height={300}
+                    
+                />
+            );
+        })
+    }
+
+    {
+        creation.blocks?.map((block) => {
+            if (!block) {
+                return null;
+            }
+
+            return (
+                <section>
+                    <h3> {block?.title}</h3>
+                    <p>{block.content}</p>
+                </section>
+            );
+        })
+    }
 </article>
