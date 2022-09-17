@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
