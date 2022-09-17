@@ -19,16 +19,21 @@ export default {
       name: "images",
       type: "array",
 
-      of: [{ type: "image",       options: {
-        hotspot: true
-      }, }],
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
       validation: (Rule) => Rule.required().min(1),
     },
     {
       title: "Blocks",
       name: "blocks",
       type: "array",
-      of: [{ type:"textblock" }],
+      of: [{ type: "textblock" }],
     },
   ],
 };
