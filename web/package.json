@@ -1,21 +1,18 @@
 {
-  "name": "dollyprahnn",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "author": "Youssef Eddibili <eddibili.youssef@gmail.com>",
   "scripts": {
-    "api:sync": "graphql-codegen",
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "api:sync": "./scripts/api-sync.sh",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "graphql": "^16.6.0",
-    "graphql-request": "^5.0.0",
-    "next": "^12.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "astro": "^1.2.6"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^2.12.0",
