@@ -19,6 +19,7 @@ jobs:
         run: |
           cd web
           yarn 
+          yarn api:sync
           yarn build
 
       - name: Deploy 🚀
