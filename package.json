@@ -1,34 +1,11 @@
 {
-  "name": "dollyprahnn",
+  "name": "root",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "package.json",
-  "author": "Youssef Eddibili <eddibili.youssef@gmail.com>",
-  "license": "UNLICENSED",
-  "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
-  },
-  "keywords": [
-    "sanity"
+  "workspaces": [
+    "studio",
+    "hugo"
   ],
-  "dependencies": {
-    "@sanity/base": "^2.33.2",
-    "@sanity/cli": "^2.33.2",
-    "@sanity/core": "^2.33.2",
-    "@sanity/dashboard": "^2.33.2",
-    "@sanity/default-layout": "^2.33.2",
-    "@sanity/default-login": "^2.33.2",
-    "@sanity/desk-tool": "^2.33.2",
-    "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/types": "^2.33.2",
-    "@sanity/vision": "^2.33.2",
-    "eslint": "^8.6.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
-    "styled-components": "^5.2.0"
-  },
-  "devDependencies": {}
+  "devDependencies": {
+    "lerna": "^5.5.1"
+  }
 }
