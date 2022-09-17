@@ -1,8 +1,0 @@
-node_modules/
-.env
-generated/
-dist/
-schema.graphql
-.next
-web/next-env.d.ts
-.DS_Store
