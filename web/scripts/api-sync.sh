@@ -3,9 +3,6 @@ set -e
 
 cd "$( dirname $0 )/.."
 
-
-source .env
-
 if [ -z "$GRAPHQL_ENDPOINT" ]; then
   echo "GRAPHQL_ENDPOINT env variable is undefiend"
   exit -1

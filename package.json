@@ -1,6 +1,9 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "export-vars": "./scripts/export-env-vars.sh"
+  },
   "workspaces": [
     "studio",
     "hugo"
