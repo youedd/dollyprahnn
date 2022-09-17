@@ -9,10 +9,19 @@ export default {
       type: "string",
     },
     {
+      title: "Slug",
+      name: "slug",
+      type: "slug",
+      validation: (Rule) => Rule.required(),
+    },
+    {
       title: "Images",
       name: "images",
       type: "array",
-      of: [{ type: "image" }],
+
+      of: [{ type: "image",       options: {
+        hotspot: true
+      }, }],
       validation: (Rule) => Rule.required().min(1),
     },
     {
