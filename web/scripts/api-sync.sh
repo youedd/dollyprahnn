@@ -15,7 +15,7 @@ fi
 
 echo "Clean"
 
-BUILD_PATH="./graphql/generated"
+BUILD_PATH="./src/graphql/generated"
 
 rm -f schema.graphql
 rm -rf $BUILD_PATH
