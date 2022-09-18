@@ -24,6 +24,7 @@ jobs:
           yarn 
           yarn api:sync
           yarn build
+          echo "{}" > src/fakes.json
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
