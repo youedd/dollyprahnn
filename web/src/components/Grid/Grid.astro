@@ -1,0 +1,45 @@
+---
+import { Image } from "@astrojs/image/components";
+import { url } from "inspector";
+import { getAllCreations } from "../../services/creationService";
+import { urlfFor } from "../../services/imageService";
+
+import "./Grid.css";
+
+const creations = await getAllCreations();
+---
+
+<main id="grid">
+    {
+        creations.map((creation) => {
+            const image = creation?.images?.[0];
+            if (!image) {
+                return null;
+            }
+
+            return (
+                <article class="thumb">
+                    <Image
+                        class={"image"}
+                        src={urlfFor(image)
+                            .width(1200)
+                            .height((1200 * 3) / 4)
+                            .url()}
+                        width="1200"
+                        aspectRatio="4:3"
+                        format="webp"
+                        alt=""
+                    />
+                    <h2>{creation.title}</h2>
+                </article>
+            );
+        })
+    }
+</main>
+
+<script>
+    window.addEventListener("load", () => {
+        const grid = document.getElementById("grid");
+        grid?.classList.add("animate");
+    });
+</script>

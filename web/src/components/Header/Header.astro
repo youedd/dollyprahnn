@@ -1,0 +1,24 @@
+---
+import "./Header.css";
+---
+
+<header id="header">
+    <h1>Dollyprahnn</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="#footer" class="icon solid fa-info-circle">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="header-top"></div>
+<slot />
+<div class="header-bottom"></div>
+
+<script>
+    window.addEventListener("load", () => {
+        const header = document.getElementById("header");
+        header?.classList.add("animate");
+    });
+</script>
