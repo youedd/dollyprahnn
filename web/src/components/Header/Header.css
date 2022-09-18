@@ -1,3 +1,11 @@
+.header-top {
+    height: 0;
+}
+
+.header-bottom {
+    height: 4em;
+}
+
 #header {
     box-sizing: border-box;
     transform: translateY(4em);
@@ -62,8 +70,12 @@
 
 @media screen and (max-width: 736px) {
 
-    body {
-        padding: 4em 0 0 0;
+    .header-top {
+        height: 4em;
+    }
+
+    .header-bottom {
+        height: 0;
     }
 
     #header {
