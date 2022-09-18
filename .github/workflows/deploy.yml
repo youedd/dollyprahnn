@@ -23,8 +23,8 @@ jobs:
           cd web
           yarn 
           yarn api:sync
-          yarn build
           yarn ts-node --esm ./scripts/generate-fakes.ts
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
