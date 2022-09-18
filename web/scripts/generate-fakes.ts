@@ -25,9 +25,7 @@ const getFakeImage = (): Image => {
 
     return {
         asset: {
-            source: {
-                url: faker.image.abstract(dimensions?.width, dimensions?.height)
-            }
+            url: faker.image.cats(dimensions?.width, dimensions?.height, true)
         }
     };
 }
@@ -62,7 +60,7 @@ const getFakeCreation = (): Creation => {
 
 const getFakeCreations = (): Creation[] => {
     return Array
-        .from({ length: 10 + Math.floor(Math.random() * 10) })
+        .from({ length: 20 + Math.floor(Math.random() * 10) })
         .map(getFakeCreation)
 }
 

@@ -9,7 +9,7 @@ if [[ -f "$ENV" ]]; then
 fi
 
 if [ -z "$GRAPHQL_ENDPOINT" ]; then
-  echo "GRAPHQL_ENDPOINT env variable is undefiend"
+  echo "GRAPHQL_ENDPOINT env variable is undefined"
   exit -1
 fi
 
