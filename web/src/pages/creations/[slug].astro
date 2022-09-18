@@ -1,18 +1,14 @@
 ---
-import client from "../../../graphql/client";
 import type { Creation } from "../../../graphql/generated/sdk";
 import { Image } from "@astrojs/image/components";
+import { getAllCreations } from "../../services/creationService";
 
 export type Props = {
     creation: Creation;
 };
 
 export const getStaticPaths = async () => {
-    const response = await client().allCreation({
-        limit: -1,
-        offset: 0,
-    });
-    const creations = response.allCreation;
+    const creations = await getAllCreations();
 
     return creations.map((creation) => {
         const slug = creation.slug?.current;
@@ -45,7 +41,6 @@ const { creation } = Astro.props;
                     alt={img.asset?.altText ?? ""}
                     width={300}
                     height={300}
-                    
                 />
             );
         })
