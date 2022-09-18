@@ -1,0 +1,89 @@
+#header {
+    box-sizing: border-box;
+    transform: translateY(4em);
+    transition: transform 1s ease;
+    background: #1f2224;
+    bottom: 0;
+    line-height: 4em;
+    padding: 0 0 0 1.5em;
+    position: fixed;
+    user-select: none;
+    z-index: 10002;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header.animate {
+    transform: translateY(0);
+}
+
+#header h1 {
+    text-transform: uppercase;
+    color: #a0a0a1;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#header nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header nav>ul>li a {
+    transition: background-color 0.5s ease;
+    border: 0;
+    color: #ffffff;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    padding: 0 1.65em;
+    text-transform: uppercase;
+}
+
+
+#header nav>ul>li a.icon:before {
+    color: #505051;
+    float: right;
+    margin-left: 0.75em;
+}
+
+
+#header nav>ul>li a.active {
+    background-color: #242629;
+}
+
+@media screen and (max-width: 736px) {
+
+    body {
+        padding: 4em 0 0 0;
+    }
+
+    #header {
+        transform: translateY(-3.4em);
+        bottom: auto;
+        height: 4em;
+        padding: 0 1em;
+        top: 0;
+    }
+
+    #header.animate {
+        transform: translateY(0);
+    }
+
+    #header h1 {
+        font-size: 0.9em;
+    }
+
+    #header nav>ul>li a {
+        font-size: 0.9em;
+        padding: 0 1.15em;
+    }
+}
