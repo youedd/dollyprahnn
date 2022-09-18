@@ -1,5 +1,5 @@
 schema: 'schema.graphql'
-documents: 'src/graphql/**/*.gql'
+documents: 'src/graphql/generated/**/*.gql'
 generates:
   src/graphql/generated/sdk.ts:
     plugins:
