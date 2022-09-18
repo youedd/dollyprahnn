@@ -6,6 +6,9 @@ on:
 
 env:
   GRAPHQL_ENDPOINT: ${{ secrets.GRAPHQL_ENDPOINT }}
+  SANITY_DATASET: ${{ secrets.SANITY_DATASET }}
+  SANITY_PROJECT_ID: ${{ secrets.SANITY_PROJECT_ID}}
+  SANITY_API_HOST: ${{ secrets.SANITY_API_HOST}}
 
 jobs:
   build-and-deploy:
