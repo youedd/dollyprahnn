@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "generate:fakes": "DEV=1 ts-node --esm ./scripts/generate-fakes.ts",
     "api:sync": "./scripts/api-sync.sh",
     "dev": "astro dev",
     "start": "astro dev",
@@ -23,6 +24,8 @@
     "@types/node": "^18.7.18",
     "get-graphql-schema": "^2.1.2",
     "gql-generator": "^1.0.17",
+    "ts-node": "^10.9.1",
+    "@faker-js/faker": "^7.5.0",
     "typescript": "^4.8.3"
   }
 }
