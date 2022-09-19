@@ -1,0 +1,32 @@
+---
+import type { Creation as CreationType } from "../../graphql/generated/sdk";
+import Layout from "../../components/Layout/Layout.astro";
+import { getAllCreations } from "../../services/creationService";
+import Creation from "../../components/creations/Creation/Creation.astro";
+
+type Props = {
+    creation: CreationType;
+};
+
+export const getStaticPaths = async () => {
+    const creations = await getAllCreations();
+
+    return creations.map((creation) => {
+        const slug = creation?.slug?.current;
+
+        return {
+            params: { slug },
+            props: { creation },
+        };
+    });
+};
+
+const { creation } = Astro.props;
+
+const title = `Dollyprahnn | ${creation.title}`;
+const description = "Art gallery of a self-proclaimed artist";
+---
+
+<Layout title={title} description={description}>
+    <Creation creation={creation} />
+</Layout>
