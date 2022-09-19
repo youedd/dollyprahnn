@@ -25,7 +25,8 @@ const getFakeImage = (): Image => {
 
     return {
         asset: {
-            url: faker.image.cats(dimensions?.width, dimensions?.height, true)
+            url: faker.image.cats(dimensions?.width, dimensions?.height, true),
+            metadata: { dimensions }
         }
     };
 }
