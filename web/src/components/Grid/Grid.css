@@ -20,7 +20,7 @@ main.animate .thumb {
 }
 
 .thumb:after {
-    background-image: linear-gradient(to top, rgba(10, 17, 25, 0.35) 5%, rgba(10, 17, 25, 0) 35%);
+    background-image: linear-gradient(to top,rgba(10,17,25,.35) 10%,rgba(10,17,25,0) 30%);
     pointer-events: none;
     background-size: cover;
     content: '';
