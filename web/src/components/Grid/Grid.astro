@@ -12,23 +12,27 @@ const creations = await getAllCreations();
     {
         creations.map((creation) => {
             const image = creation?.images?.[0];
+            const slug = creation?.slug?.current;
+
             if (!image) {
                 return null;
             }
 
             return (
                 <article class="thumb">
-                    <Image
-                        class={"image"}
-                        src={urlfFor(image)
-                            .width(1200)
-                            .height((1200 * 3) / 4)
-                            .url()}
-                        width="1200"
-                        aspectRatio="4:3"
-                        format="webp"
-                        alt=""
-                    />
+                    <a href={`/creations/${slug}`}>
+                        <Image
+                            class={"image"}
+                            src={urlfFor(image)
+                                .width(1200)
+                                .height((1200 * 3) / 4)
+                                .url()}
+                            width="1200"
+                            aspectRatio="4:3"
+                            format="webp"
+                            alt=""
+                        />
+                    </a>
                     <h2>{creation.title}</h2>
                 </article>
             );
