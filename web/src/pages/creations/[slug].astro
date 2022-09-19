@@ -1,10 +1,11 @@
 ---
-import type { Creation } from "../../graphql/generated/sdk";
+import type { Creation as CreationType } from "../../graphql/generated/sdk";
 import Layout from "../../components/Layout/Layout.astro";
 import { getAllCreations } from "../../services/creationService";
+import Creation from "../../components/creations/Creation/Creation.astro";
 
 type Props = {
-    creation: Creation;
+    creation: CreationType;
 };
 
 export const getStaticPaths = async () => {
@@ -27,5 +28,5 @@ const description = "Art gallery of a self-proclaimed artist";
 ---
 
 <Layout title={title} description={description}>
-    <div></div>
+    <Creation creation={creation} />
 </Layout>
