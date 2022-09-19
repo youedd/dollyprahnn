@@ -1,6 +1,5 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { url } from "inspector";
 import { getAllCreations } from "../../services/creationService";
 import { urlfFor } from "../../services/imageService";
 
@@ -9,7 +8,7 @@ import "./Grid.css";
 const creations = await getAllCreations();
 ---
 
-<main id="grid">
+<section id="grid">
     {
         creations.map((creation) => {
             const image = creation?.images?.[0];
@@ -35,7 +34,7 @@ const creations = await getAllCreations();
             );
         })
     }
-</main>
+</section>
 
 <script>
     window.addEventListener("load", () => {

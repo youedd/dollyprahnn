@@ -1,0 +1,24 @@
+main {
+    width: 100%;
+    height: calc(100vh - 4em);
+    overflow: hidden;
+}
+
+.header-top {
+    height: 0;
+}
+
+.header-bottom {
+    height: 4em;
+}
+
+@media screen and (max-width: 736px) {
+
+    .header-top {
+        height: 4em;
+    }
+
+    .header-bottom {
+        height: 0;
+    }
+}
